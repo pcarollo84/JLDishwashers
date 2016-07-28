@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3h9-cr-Bj7">
+            <objects>
+                <navigationController id="pGB-qa-Au7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLP-UV-sSb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kEF-lI-Vcd" kind="relationship" relationship="rootViewController" id="DZn-i5-e3I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u24-hg-010" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="491"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="Hou-OJ-B58">
+            <objects>
+                <collectionViewController id="kEF-lI-Vcd" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ru1-4B-PNv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V38-u8-wXe">
+                            <size key="itemSize" width="244" height="213"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WfF-0B-lqr">
+                                <rect key="frame" x="0.0" y="64" width="244" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="213"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-bA-5sj">
+                                            <rect key="frame" x="8" y="8" width="228" height="153"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-aP-Nyz">
+                                            <rect key="frame" x="8" y="173" width="228" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Ta5-bA-5sj" firstAttribute="leading" secondItem="WfF-0B-lqr" secondAttribute="leadingMargin" id="432-2E-zmA"/>
+                                    <constraint firstItem="CZ1-aP-Nyz" firstAttribute="top" secondItem="Ta5-bA-5sj" secondAttribute="bottom" constant="12" id="DcK-Ch-Kn7"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ta5-bA-5sj" secondAttribute="trailing" id="DkF-Jd-k2f"/>
+                                    <constraint firstItem="Ta5-bA-5sj" firstAttribute="top" secondItem="WfF-0B-lqr" secondAttribute="topMargin" id="LBm-AR-FsN"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="CZ1-aP-Nyz" secondAttribute="bottom" constant="11" id="dmh-A2-glp"/>
+                                    <constraint firstItem="CZ1-aP-Nyz" firstAttribute="trailing" secondItem="Ta5-bA-5sj" secondAttribute="trailing" id="liQ-gF-qDg"/>
+                                    <constraint firstItem="CZ1-aP-Nyz" firstAttribute="leading" secondItem="Ta5-bA-5sj" secondAttribute="leading" id="oAx-KS-i4f"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="kEF-lI-Vcd" id="mpU-P8-da1"/>
+                            <outlet property="delegate" destination="kEF-lI-Vcd" id="zI1-06-i9N"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Jhy-ao-NGf"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXp-Fy-vIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="491"/>
+        </scene>
+    </scenes>
+</document>
