@@ -12,6 +12,7 @@
 		5204BB881D4A79240045B1BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5204BB871D4A79240045B1BA /* Assets.xcassets */; };
 		5204BB8B1D4A79240045B1BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5204BB891D4A79240045B1BA /* LaunchScreen.storyboard */; };
 		5204BB961D4A79240045B1BA /* JLDishwashersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204BB951D4A79240045B1BA /* JLDishwashersTests.swift */; };
+		A1EAF9F0DC5B247F19CACBE6 /* Pods_JLDishwashers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22386EE7EEC5C9FC826C27B9 /* Pods_JLDishwashers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16C70386E05236977F17D4C9 /* Pods-JLDishwashers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwashers.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwashers/Pods-JLDishwashers.release.xcconfig"; sourceTree = "<group>"; };
+		22386EE7EEC5C9FC826C27B9 /* Pods_JLDishwashers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLDishwashers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5204BB7D1D4A79240045B1BA /* JLDishwashers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLDishwashers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5204BB801D4A79240045B1BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5204BB851D4A79240045B1BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		5204BB911D4A79240045B1BA /* JLDishwashersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDishwashersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5204BB951D4A79240045B1BA /* JLDishwashersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDishwashersTests.swift; sourceTree = "<group>"; };
 		5204BB971D4A79240045B1BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B1180490DAA17F9ACA9B66 /* Pods-JLDishwashers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwashers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwashers/Pods-JLDishwashers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EAF9F0DC5B247F19CACBE6 /* Pods_JLDishwashers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2E089C3B8429BBF15F0DE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22386EE7EEC5C9FC826C27B9 /* Pods_JLDishwashers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5204BB741D4A79240045B1BA = {
 			isa = PBXGroup;
 			children = (
 				5204BB7F1D4A79240045B1BA /* JLDishwashers */,
 				5204BB941D4A79240045B1BA /* JLDishwashersTests */,
 				5204BB7E1D4A79240045B1BA /* Products */,
+				99975AD1EA4D77707AB9A060 /* Pods */,
+				3C2E089C3B8429BBF15F0DE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +95,8 @@
 				5204BB871D4A79240045B1BA /* Assets.xcassets */,
 				5204BB891D4A79240045B1BA /* LaunchScreen.storyboard */,
 				5204BB8C1D4A79240045B1BA /* Info.plist */,
+				5204BBA11D4A7A480045B1BA /* Model */,
+				5204BBA01D4A7A3A0045B1BA /* Network */,
 			);
 			path = JLDishwashers;
 			sourceTree = "<group>";
@@ -93,6 +110,29 @@
 			path = JLDishwashersTests;
 			sourceTree = "<group>";
 		};
+		5204BBA01D4A7A3A0045B1BA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		5204BBA11D4A7A480045B1BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		99975AD1EA4D77707AB9A060 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4B1180490DAA17F9ACA9B66 /* Pods-JLDishwashers.debug.xcconfig */,
+				16C70386E05236977F17D4C9 /* Pods-JLDishwashers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5204BB9A1D4A79240045B1BA /* Build configuration list for PBXNativeTarget "JLDishwashers" */;
 			buildPhases = (
+				9C8178A4DA01CBED2AD94E78 /* [CP] Check Pods Manifest.lock */,
 				5204BB791D4A79240045B1BA /* Sources */,
 				5204BB7A1D4A79240045B1BA /* Frameworks */,
 				5204BB7B1D4A79240045B1BA /* Resources */,
+				EFFBFFAD697AFE09C0B2EE91 /* [CP] Embed Pods Frameworks */,
+				30BB983EF905245BA24AD9EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +231,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30BB983EF905245BA24AD9EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLDishwashers/Pods-JLDishwashers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8178A4DA01CBED2AD94E78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFFBFFAD697AFE09C0B2EE91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLDishwashers/Pods-JLDishwashers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5204BB791D4A79240045B1BA /* Sources */ = {
@@ -323,6 +414,7 @@
 		};
 		5204BB9B1D4A79240045B1BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B1180490DAA17F9ACA9B66 /* Pods-JLDishwashers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JLDishwashers/Info.plist;
@@ -334,6 +426,7 @@
 		};
 		5204BB9C1D4A79240045B1BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16C70386E05236977F17D4C9 /* Pods-JLDishwashers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JLDishwashers/Info.plist;
@@ -386,6 +479,7 @@
 				5204BB9C1D4A79240045B1BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5204BB9D1D4A79240045B1BA /* Build configuration list for PBXNativeTarget "JLDishwashersTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +488,7 @@
 				5204BB9F1D4A79240045B1BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
