@@ -8,9 +8,17 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 import SwiftyJSON
 
 class NetworkController {
+    
+    let imageDownloader = ImageDownloader(
+        configuration: ImageDownloader.defaultURLSessionConfiguration(),
+        downloadPrioritization: .FIFO,
+        maximumActiveDownloads: 4,
+        imageCache: AutoPurgingImageCache()
+    )
     
     func listOfDishwashers(completion: (result: [Product]?) -> Void)  {
         
@@ -45,6 +53,20 @@ class NetworkController {
                 
                 completion(result: nil)
                 
+            }
+        }
+        
+    }
+    
+    
+    func downloadImageWithURLString(urlString: String, completion: (image: UIImage?) -> Void){
+
+        let URLRequest = NSURLRequest(URL: NSURL(string: urlString)!)
+        
+        imageDownloader.downloadImage(URLRequest: URLRequest) { response in
+            
+            if let image = response.result.value {
+                completion(image: image)
             }
         }
         

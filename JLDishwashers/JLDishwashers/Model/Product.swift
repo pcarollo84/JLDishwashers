@@ -35,7 +35,7 @@ struct Product {
         
         if let imageURL = json["image"].string {
             
-            self.imageURL = imageURL
+            self.imageURL = "http:" + imageURL
             
         }
         

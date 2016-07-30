@@ -29,41 +29,57 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ru1-4B-PNv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V38-u8-wXe">
-                            <size key="itemSize" width="244" height="213"/>
+                            <size key="itemSize" width="256" height="323"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WfF-0B-lqr">
-                                <rect key="frame" x="0.0" y="64" width="244" height="213"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dishwasherCollectionViewCellId" id="WfF-0B-lqr" customClass="DishwasherCollectionViewCell" customModule="JLDishwashers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="256" height="323"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="244" height="213"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="323"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-bA-5sj">
-                                            <rect key="frame" x="8" y="8" width="228" height="153"/>
+                                            <rect key="frame" x="8" y="8" width="240" height="233"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-aP-Nyz">
-                                            <rect key="frame" x="8" y="173" width="228" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-aP-Nyz">
+                                            <rect key="frame" x="8" y="253" width="240" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-ZG-0x4">
+                                            <rect key="frame" x="8" y="284" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Ta5-bA-5sj" firstAttribute="leading" secondItem="WfF-0B-lqr" secondAttribute="leadingMargin" id="432-2E-zmA"/>
                                     <constraint firstItem="CZ1-aP-Nyz" firstAttribute="top" secondItem="Ta5-bA-5sj" secondAttribute="bottom" constant="12" id="DcK-Ch-Kn7"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Ta5-bA-5sj" secondAttribute="trailing" id="DkF-Jd-k2f"/>
+                                    <constraint firstItem="7UB-ZG-0x4" firstAttribute="top" secondItem="CZ1-aP-Nyz" secondAttribute="bottom" constant="10" id="FZK-bo-TrM"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="7UB-ZG-0x4" secondAttribute="bottom" constant="10" id="IkQ-Bn-N4D"/>
                                     <constraint firstItem="Ta5-bA-5sj" firstAttribute="top" secondItem="WfF-0B-lqr" secondAttribute="topMargin" id="LBm-AR-FsN"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="CZ1-aP-Nyz" secondAttribute="bottom" constant="11" id="dmh-A2-glp"/>
                                     <constraint firstItem="CZ1-aP-Nyz" firstAttribute="trailing" secondItem="Ta5-bA-5sj" secondAttribute="trailing" id="liQ-gF-qDg"/>
                                     <constraint firstItem="CZ1-aP-Nyz" firstAttribute="leading" secondItem="Ta5-bA-5sj" secondAttribute="leading" id="oAx-KS-i4f"/>
+                                    <constraint firstItem="7UB-ZG-0x4" firstAttribute="leading" secondItem="Ta5-bA-5sj" secondAttribute="leading" id="tlP-DU-yPd"/>
+                                    <constraint firstItem="7UB-ZG-0x4" firstAttribute="trailing" secondItem="Ta5-bA-5sj" secondAttribute="trailing" id="yCc-tL-fEF"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="CZ1-aP-Nyz" id="Jt8-4b-aXK"/>
+                                    <outlet property="dishwasherImageView" destination="Ta5-bA-5sj" id="L0A-gA-neY"/>
+                                    <outlet property="priceLabel" destination="7UB-ZG-0x4" id="nvU-yz-SpM"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
