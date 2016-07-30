@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct Price{
     
@@ -30,5 +31,22 @@ struct Price{
         
     }
     
+    init(currentValue: Double){
+        
+        self.currentValue = currentValue
+        
+    }
     
+    init(json: JSON){
+        
+        if let currentValue = json["now"].string {
+            
+            let formatter = NSNumberFormatter()
+            
+            self.currentValue = formatter.numberFromString(currentValue)?.doubleValue
+            
+        }
+        
+    }
+        
 }
