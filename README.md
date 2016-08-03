@@ -6,7 +6,7 @@ iOS Developer Technical Test – Dishwasher App
 Instructions
 -------
 
-Clone the project as is. The repo include the Pods/ directory, so you don't need to run 'pod install'.
+Clone the project into your mac. The repo include the Pods/ directory, so you don't need to run 'pod install'.
 Open JLDishwashers.xcworkspace to run the app on the simulator (or on a physical device)
 
 Notes
