@@ -16,6 +16,9 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
     
     override func viewDidLoad() {
         
+        self.view.backgroundColor = UIColor.backgroundColor()
+        self.collectionView?.backgroundColor = UIColor.clearColor()
+        
         let netWorkController = NetworkController()
         
         netWorkController.listOfDishwashers({
@@ -116,7 +119,7 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
             guard let product = selectedProduct else {return}
             
             destinationVC.product = product
-                        
+            
         }
         
     }

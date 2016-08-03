@@ -20,6 +20,11 @@
 		52B872211D4C9D200056CCA9 /* NetworkTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B872201D4C9D200056CCA9 /* NetworkTestCase.swift */; };
 		52B872241D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B872231D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift */; };
 		52E720F51D51C7650024745A /* DishwasherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */; };
+		52E720F91D51DF910024745A /* DishwasherDetailImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E720F81D51DF910024745A /* DishwasherDetailImagesCell.swift */; };
+		52E720FB1D51FD600024745A /* DishwasherDetailInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E720FA1D51FD600024745A /* DishwasherDetailInfoCell.swift */; };
+		52E720FD1D52064E0024745A /* DishwasherDetailSpecificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E720FC1D52064E0024745A /* DishwasherDetailSpecificationCell.swift */; };
+		52E720FF1D520E3B0024745A /* DishwasherDetailPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E720FE1D520E3B0024745A /* DishwasherDetailPriceViewController.swift */; };
+		52E721021D5227800024745A /* ExtensionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E721011D5227800024745A /* ExtensionUtility.swift */; };
 		A1EAF9F0DC5B247F19CACBE6 /* Pods_JLDishwashers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22386EE7EEC5C9FC826C27B9 /* Pods_JLDishwashers.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +58,11 @@
 		52B872201D4C9D200056CCA9 /* NetworkTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestCase.swift; sourceTree = "<group>"; };
 		52B872231D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherCollectionViewCell.swift; path = ViewController/CollectionViewCell/DishwasherCollectionViewCell.swift; sourceTree = "<group>"; };
 		52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherDetailViewController.swift; path = ViewController/DishwasherDetailViewController.swift; sourceTree = "<group>"; };
+		52E720F81D51DF910024745A /* DishwasherDetailImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherDetailImagesCell.swift; path = ViewController/DetailCell/DishwasherDetailImagesCell.swift; sourceTree = "<group>"; };
+		52E720FA1D51FD600024745A /* DishwasherDetailInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherDetailInfoCell.swift; path = ViewController/DetailCell/DishwasherDetailInfoCell.swift; sourceTree = "<group>"; };
+		52E720FC1D52064E0024745A /* DishwasherDetailSpecificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherDetailSpecificationCell.swift; path = ViewController/DetailCell/DishwasherDetailSpecificationCell.swift; sourceTree = "<group>"; };
+		52E720FE1D520E3B0024745A /* DishwasherDetailPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherDetailPriceViewController.swift; path = ViewController/DishwasherDetailPriceViewController.swift; sourceTree = "<group>"; };
+		52E721011D5227800024745A /* ExtensionUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionUtility.swift; path = Utility/ExtensionUtility.swift; sourceTree = "<group>"; };
 		B4B1180490DAA17F9ACA9B66 /* Pods-JLDishwashers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwashers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwashers/Pods-JLDishwashers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +124,7 @@
 				520BAA611D4B322B005AB1F6 /* ViewController */,
 				5204BBA11D4A7A480045B1BA /* Model */,
 				5204BBA01D4A7A3A0045B1BA /* Network */,
+				52E721001D52275E0024745A /* Extensions */,
 			);
 			path = JLDishwashers;
 			sourceTree = "<group>";
@@ -151,7 +162,7 @@
 			children = (
 				520BAA621D4B3251005AB1F6 /* DishwasherCollectionViewController.swift */,
 				52B872221D4CA1F50056CCA9 /* CollectionViewCell */,
-				52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */,
+				52E720F61D51DF4E0024745A /* Details */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -162,6 +173,34 @@
 				52B872231D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift */,
 			);
 			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		52E720F61D51DF4E0024745A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */,
+				52E720F71D51DF640024745A /* DetailCells */,
+				52E720FE1D520E3B0024745A /* DishwasherDetailPriceViewController.swift */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		52E720F71D51DF640024745A /* DetailCells */ = {
+			isa = PBXGroup;
+			children = (
+				52E720F81D51DF910024745A /* DishwasherDetailImagesCell.swift */,
+				52E720FA1D51FD600024745A /* DishwasherDetailInfoCell.swift */,
+				52E720FC1D52064E0024745A /* DishwasherDetailSpecificationCell.swift */,
+			);
+			name = DetailCells;
+			sourceTree = "<group>";
+		};
+		52E721001D52275E0024745A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52E721011D5227800024745A /* ExtensionUtility.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		99975AD1EA4D77707AB9A060 /* Pods */ = {
@@ -329,8 +368,13 @@
 				5204BB811D4A79240045B1BA /* AppDelegate.swift in Sources */,
 				52B872241D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift in Sources */,
 				52E720F51D51C7650024745A /* DishwasherDetailViewController.swift in Sources */,
+				52E720FB1D51FD600024745A /* DishwasherDetailInfoCell.swift in Sources */,
+				52E720F91D51DF910024745A /* DishwasherDetailImagesCell.swift in Sources */,
+				52E721021D5227800024745A /* ExtensionUtility.swift in Sources */,
+				52E720FF1D520E3B0024745A /* DishwasherDetailPriceViewController.swift in Sources */,
 				5204BBA31D4A80B20045B1BA /* Product.swift in Sources */,
 				520BAA631D4B3251005AB1F6 /* DishwasherCollectionViewController.swift in Sources */,
+				52E720FD1D52064E0024745A /* DishwasherDetailSpecificationCell.swift in Sources */,
 				5204BBA51D4A81050045B1BA /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

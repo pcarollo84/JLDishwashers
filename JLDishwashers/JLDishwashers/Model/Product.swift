@@ -118,6 +118,10 @@ struct Product {
             
         }
         
+        features?.sortInPlace({
+            return $0.name < $1.name
+        })
+        
     }
     
 }
