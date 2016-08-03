@@ -66,6 +66,7 @@ class NetworkController {
         imageDownloader.downloadImage(URLRequest: URLRequest) { response in
             
             if let image = response.result.value {
+                
                 completion(image: image)
             }
         }

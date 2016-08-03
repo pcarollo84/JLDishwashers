@@ -19,6 +19,8 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
         self.view.backgroundColor = UIColor.backgroundColor()
         self.collectionView?.backgroundColor = UIColor.clearColor()
         
+        self.navigationItem.title = "Dishwashers"
+        
         let netWorkController = NetworkController()
         
         netWorkController.listOfDishwashers({
@@ -34,6 +36,8 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
             guard let products = result else {return}
             
             self.products = products
+            
+            self.navigationItem.title = "Dishwashers (" + String(products.count) + ")"
             
             self.collectionView?.reloadData()
             

@@ -62,5 +62,28 @@ class NetworkTestCase: XCTestCase {
         
     }
 
+    func testDishwasherDetail(){
+        
+        let getExpectation = self.expectationWithDescription("GET have the detail for a dishwasher give its productId")
+        
+        
+        self.networkController.productDetail("1971515", completion: { (result) in
+            
+            XCTAssertNotNil(result)
+            
+            getExpectation.fulfill()
+            
+        })
+        
+        self.waitForExpectationsWithTimeout(3) { (error: NSError?) in
+            
+            //best would be to cancel the get operation
+            //in the case the get take too long
+            
+        }
+
+        
+    }
+    
 
 }

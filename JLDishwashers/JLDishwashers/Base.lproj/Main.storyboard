@@ -236,7 +236,7 @@
         <!--Dishwasher Detail Price View Controller-->
         <scene sceneID="efa-ta-uHn">
             <objects>
-                <viewController id="tzh-jj-iQ1" customClass="DishwasherDetailPriceViewController" customModule="JLDishwashers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailPriceVC" id="tzh-jj-iQ1" customClass="DishwasherDetailPriceViewController" customModule="JLDishwashers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I90-0D-y3F">
                         <rect key="frame" x="0.0" y="0.0" width="380" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

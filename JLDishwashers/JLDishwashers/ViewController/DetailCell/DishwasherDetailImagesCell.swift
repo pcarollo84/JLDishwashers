@@ -38,18 +38,30 @@ class DishwasherDetailImagesCell: UITableViewCell, UIScrollViewDelegate {
         imagesPageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         imagesPageControl.currentPageIndicatorTintColor = UIColor.blackColor()
         
+        for subview in imagesScrollView.subviews {
+            subview.removeFromSuperview()
+        }
+        
+        layoutIfNeeded()
+        
+        print("Content size")
+        print(imagesScrollView.contentSize)
+    }
+    
+
+    func buildImagesRoll(){
+        
         guard let imageURLsNotNil = imageURLs else {return}
         
         imagesPageControl.numberOfPages = imageURLsNotNil.count
         imagesPageControl.currentPage = 0
         
-        for subview in imagesScrollView.subviews {
-            subview.removeFromSuperview()
-        }
-        
         var x = 0.0 as CGFloat
         
         for imageURL in imageURLsNotNil {
+            
+            print("first")
+            print(imagesScrollView.frame)
             
             let imageView = UIImageView(frame: CGRect(x: x, y: 0, width: imagesScrollView.frame.size.width, height: imagesScrollView.frame.size.height - 20))
             imageView.contentMode = .ScaleAspectFit
@@ -67,9 +79,10 @@ class DishwasherDetailImagesCell: UITableViewCell, UIScrollViewDelegate {
         }
         
         imagesScrollView.contentSize = CGSize(width: x, height: imagesScrollView.frame.size.height - 20)
+
+        
     }
     
-
     //MARK: ScrollView Delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -88,10 +101,15 @@ class DishwasherDetailImagesCell: UITableViewCell, UIScrollViewDelegate {
         
     }
 
-    override func layoutSubviews() {
+
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
         
-        super.layoutSubviews()
+
+        buildImagesRoll()
+       
         
     }
+    
     
 }

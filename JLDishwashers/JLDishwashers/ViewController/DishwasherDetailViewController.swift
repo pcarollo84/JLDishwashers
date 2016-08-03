@@ -12,11 +12,16 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
  
     var product: Product?
     
+    var priceViewController: DishwasherDetailPriceViewController?
+    
+    var showDetailPriceAsFooter = false
+    
     @IBOutlet weak var productDetailTableView: UITableView!
     
     @IBOutlet weak var productDetailPriceContainerView: UIView!
     
     @IBOutlet weak var productDetailPriceContainerViewWidthLayoutConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         
@@ -28,6 +33,8 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
         let netWorkController = NetworkController()
         
         guard let productNotNil = product,  productId = productNotNil.productId else { return }
+        
+        self.navigationItem.title = productNotNil.title
         
         netWorkController.productDetail(productId) { (result) in
             
@@ -43,22 +50,24 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
         
         super.viewWillAppear(animated)
         
-        
+        checkOrientation()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        checkOrientation()
+        
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "priceEmbeddedSegue" {
             
-            let embeddedVC = segue.destinationViewController as! DishwasherDetailPriceViewController
+            guard let priceViewControllerNotNil = segue.destinationViewController as? DishwasherDetailPriceViewController else { return }
             
-            embeddedVC.product = product
+            priceViewController = priceViewControllerNotNil
+            
+            priceViewControllerNotNil.product = product
             
         }
     }
@@ -138,6 +147,30 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
         }
     }
     
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        if section != 0 || showDetailPriceAsFooter == false {return nil}
+        
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 150))
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let priceDetailVC = storyboard.instantiateViewControllerWithIdentifier("detailPriceVC") as! DishwasherDetailPriceViewController
+        
+        priceDetailVC.product = product
+        
+        guard let subview = priceDetailVC.view else { return nil }
+        
+        subview.backgroundColor = UIColor.clearColor()
+        footerView.addSubview(subview)
+        footerView.translatesAutoresizingMaskIntoConstraints = false
+        footerView.backgroundColor = UIColor.whiteColor()
+        
+        
+        return footerView
+        
+    }
+    
     //MARK: UITableView Delegate
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -157,9 +190,19 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
         return 44
     }
     
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return showDetailPriceAsFooter ? 150 : 1
+        }
+        
+        return 1
+    }
+    
     //MARK: Orientation
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
         checkOrientation()
         
@@ -168,16 +211,19 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
     func checkOrientation(){
 
         switch UIDevice.currentDevice().orientation {
-        case UIDeviceOrientation.Portrait:
+        case UIDeviceOrientation.Portrait, UIDeviceOrientation.PortraitUpsideDown:
             productDetailPriceContainerViewWidthLayoutConstraint.constant = 0
+            showDetailPriceAsFooter = true
         case UIDeviceOrientation.LandscapeLeft, UIDeviceOrientation.LandscapeRight:
             productDetailPriceContainerViewWidthLayoutConstraint.constant = 380
+            showDetailPriceAsFooter = false
         default:
             productDetailPriceContainerViewWidthLayoutConstraint.constant = 380
+            showDetailPriceAsFooter = false
         }
         
+        
         self.productDetailTableView.reloadData()
-
         
     }
 

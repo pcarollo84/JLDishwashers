@@ -44,11 +44,21 @@ class DishwasherCollectionViewCell: UICollectionViewCell {
         
         guard let imageURL = productNotNil.imageURL else {return}
         
+        dishwasherImageView.alpha = 0
+        
         networkController.downloadImageWithURLString(imageURL) { (image) in
             
             guard let imageNotNil = image else {return}
             
-            self.dishwasherImageView.image = imageNotNil
+            let newImage = imageNotNil.af_imageScaledToSize(CGSize(width: 100, height: 100))
+            
+            self.dishwasherImageView.image = newImage
+            
+            UIView.animateWithDuration(0.25, animations: { 
+                
+                self.dishwasherImageView.alpha = 1.0
+                
+            })
             
         }
 
