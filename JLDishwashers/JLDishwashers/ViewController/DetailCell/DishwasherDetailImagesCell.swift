@@ -31,6 +31,7 @@ class DishwasherDetailImagesCell: UITableViewCell, UIScrollViewDelegate {
     
         imagesPageControl.addTarget(self, action: #selector(DishwasherDetailImagesCell.handlePageControlValueChanged(_:)), forControlEvents: .ValueChanged)
         
+        imagesPageControl.currentPage = 0
     }
     
     func updateUI() {
@@ -54,7 +55,6 @@ class DishwasherDetailImagesCell: UITableViewCell, UIScrollViewDelegate {
         guard let imageURLsNotNil = imageURLs else {return}
         
         imagesPageControl.numberOfPages = imageURLsNotNil.count
-        imagesPageControl.currentPage = 0
         
         var x = 0.0 as CGFloat
         
@@ -78,8 +78,9 @@ class DishwasherDetailImagesCell: UITableViewCell, UIScrollViewDelegate {
             
         }
         
-        imagesScrollView.contentSize = CGSize(width: x, height: imagesScrollView.frame.size.height - 20)
+        imagesScrollView.contentSize = CGSize(width: x, height: imagesScrollView.frame.size.height - 40)
 
+        handlePageControlValueChanged(imagesPageControl)
         
     }
     

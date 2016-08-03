@@ -176,8 +176,40 @@
                                             <outlet property="descriptionLabel" destination="R5q-WY-K7a" id="0fI-pF-GTJ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productDetailSpecificationCellId" rowHeight="44" id="cHl-4N-dHQ" customClass="DishwasherDetailSpecificationCell" customModule="JLDishwashers" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productDetailCodeCellId" rowHeight="44" id="eMF-ts-vcu" customClass="DishwasherDetailCodeCell" customModule="JLDishwashers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="470" width="218" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eMF-ts-vcu" id="MU0-2w-2Nk">
+                                            <rect key="frame" x="0.0" y="0.0" width="218" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-qu-luN">
+                                                    <rect key="frame" x="8" y="13" width="94" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N.A." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnS-6z-Ypc">
+                                                    <rect key="frame" x="107" y="13" width="28" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KnS-6z-Ypc" firstAttribute="leading" secondItem="8rp-qu-luN" secondAttribute="trailing" constant="5" id="3DI-rx-QpS"/>
+                                                <constraint firstItem="KnS-6z-Ypc" firstAttribute="centerY" secondItem="8rp-qu-luN" secondAttribute="centerY" id="42C-ZU-4gF"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="KnS-6z-Ypc" secondAttribute="trailing" id="Ut8-l2-CBW"/>
+                                                <constraint firstItem="8rp-qu-luN" firstAttribute="centerY" secondItem="MU0-2w-2Nk" secondAttribute="centerY" id="dje-UI-IL8"/>
+                                                <constraint firstItem="8rp-qu-luN" firstAttribute="leading" secondItem="MU0-2w-2Nk" secondAttribute="leadingMargin" id="lYL-X2-WFQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="productCodeLabel" destination="KnS-6z-Ypc" id="uUF-XQ-t6c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productDetailSpecificationCellId" rowHeight="44" id="cHl-4N-dHQ" customClass="DishwasherDetailSpecificationCell" customModule="JLDishwashers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="514" width="218" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cHl-4N-dHQ" id="1uS-05-1Sr">
                                             <rect key="frame" x="0.0" y="0.0" width="218" height="43"/>

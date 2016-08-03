@@ -83,7 +83,7 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
         case 0:
             return 1
         case 1:
-            return 1
+            return 2
         case 2:
             
             guard let productNotNil = product, featuresNotNil = productNotNil.features else {return 0}
@@ -110,11 +110,26 @@ class DishwasherDetailViewController: UIViewController, UITableViewDataSource, U
             
         case 1:
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("productDetailInfoCellId", forIndexPath: indexPath) as! DishwasherDetailInfoCell
+            if indexPath.row == 0 {
+                
+                let cell = tableView.dequeueReusableCellWithIdentifier("productDetailInfoCellId", forIndexPath: indexPath) as! DishwasherDetailInfoCell
+
+                cell.product = product
+                
+                return cell
+                
+            }else {
+                
+                let cell = tableView.dequeueReusableCellWithIdentifier("productDetailCodeCellId", forIndexPath: indexPath) as! DishwasherDetailCodeCell
+                
+                guard let code = product!.code else {return cell}
+                
+                cell.code = code
+                
+                return cell
+                
+            }
             
-            cell.product = product
-            
-            return cell
             
         case 2:
             
