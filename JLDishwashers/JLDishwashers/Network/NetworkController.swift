@@ -72,4 +72,31 @@ class NetworkController {
         
     }
     
+    
+    func productDetail(productId: String, completion: (result: Product?) -> Void){
+        
+        let url = "https://api.johnlewis.com/v1/products/" + productId + "?key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb"
+        
+        print("url for product: " + url)
+        
+        Alamofire.request(.GET, url).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    
+                    let product = Product(json: json)
+                    
+                    completion(result: product)
+                    
+                }
+            case .Failure(let error):
+                print(error)
+                
+                completion(result: nil)
+                
+            }
+        }
+
+    }
 }

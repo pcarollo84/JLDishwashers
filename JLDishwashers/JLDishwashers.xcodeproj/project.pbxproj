@@ -19,6 +19,7 @@
 		520BAA631D4B3251005AB1F6 /* DishwasherCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BAA621D4B3251005AB1F6 /* DishwasherCollectionViewController.swift */; };
 		52B872211D4C9D200056CCA9 /* NetworkTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B872201D4C9D200056CCA9 /* NetworkTestCase.swift */; };
 		52B872241D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B872231D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift */; };
+		52E720F51D51C7650024745A /* DishwasherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */; };
 		A1EAF9F0DC5B247F19CACBE6 /* Pods_JLDishwashers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22386EE7EEC5C9FC826C27B9 /* Pods_JLDishwashers.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		520BAA621D4B3251005AB1F6 /* DishwasherCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherCollectionViewController.swift; path = ViewController/DishwasherCollectionViewController.swift; sourceTree = "<group>"; };
 		52B872201D4C9D200056CCA9 /* NetworkTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTestCase.swift; sourceTree = "<group>"; };
 		52B872231D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherCollectionViewCell.swift; path = ViewController/CollectionViewCell/DishwasherCollectionViewCell.swift; sourceTree = "<group>"; };
+		52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DishwasherDetailViewController.swift; path = ViewController/DishwasherDetailViewController.swift; sourceTree = "<group>"; };
 		B4B1180490DAA17F9ACA9B66 /* Pods-JLDishwashers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwashers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwashers/Pods-JLDishwashers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			children = (
 				520BAA621D4B3251005AB1F6 /* DishwasherCollectionViewController.swift */,
 				52B872221D4CA1F50056CCA9 /* CollectionViewCell */,
+				52E720F41D51C7650024745A /* DishwasherDetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				520BAA601D4B3113005AB1F6 /* NetworkController.swift in Sources */,
 				5204BB811D4A79240045B1BA /* AppDelegate.swift in Sources */,
 				52B872241D4CA2210056CCA9 /* DishwasherCollectionViewCell.swift in Sources */,
+				52E720F51D51C7650024745A /* DishwasherDetailViewController.swift in Sources */,
 				5204BBA31D4A80B20045B1BA /* Product.swift in Sources */,
 				520BAA631D4B3251005AB1F6 /* DishwasherCollectionViewController.swift in Sources */,
 				5204BBA51D4A81050045B1BA /* Price.swift in Sources */,

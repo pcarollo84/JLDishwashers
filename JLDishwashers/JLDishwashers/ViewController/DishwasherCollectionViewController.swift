@@ -12,6 +12,8 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
 
     var products: [Product] = []
     
+    var selectedProduct: Product?
+    
     override func viewDidLoad() {
         
         let netWorkController = NetworkController()
@@ -55,6 +57,15 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
         
     }
     
+    //MARK: UICollectionView Delegate
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        selectedProduct = products[indexPath.row]
+        self.performSegueWithIdentifier("showProductDetailSegue", sender: self)
+        
+    }
+    
     //MARK: UICollectionView Layout
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -92,6 +103,22 @@ class DishwasherCollectionViewController: UICollectionViewController, UICollecti
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         print("transition")
         self.collectionView?.reloadData()
+    }
+    
+    //MARK: Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showProductDetailSegue" {
+            
+            let destinationVC = segue.destinationViewController as! DishwasherDetailViewController
+            
+            guard let product = selectedProduct else {return}
+            
+            destinationVC.product = product
+                        
+        }
+        
     }
     
 }
